@@ -34,7 +34,7 @@ import java.util.Map;
 
 public class Server_interaction
 {
-    String server_url = "http://10.0.0.126/update_location.php";
+    String server_url = "http://LEGG INN IP/update_location.php";
     String response_string;
     //RequestQueue queue;
     Context context;
