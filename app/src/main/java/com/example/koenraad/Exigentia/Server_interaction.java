@@ -59,7 +59,7 @@ public class Server_interaction
                         //response_string = response;
                         //callback.onSuccess(response_string);
                         //requestQueue.stop();
-                        Log.i(TAG, "the response is: "+ response_string);
+                        Log.i(TAG, "the response is: "+ response);
 
                     }
                 }
