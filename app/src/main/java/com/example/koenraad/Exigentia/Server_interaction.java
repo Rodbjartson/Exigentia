@@ -34,7 +34,7 @@ import java.util.Map;
 
 public class Server_interaction
 {
-    String server_url = "http://LEGG INN IP/update_location.php";
+    String server_url = "http://10.0.0.126/update_location.php";
     String response_string;
     //RequestQueue queue;
     Context context;
@@ -48,7 +48,7 @@ public class Server_interaction
 
     public static final String TAG = Server_interaction.class.getSimpleName();
 
-    public void post_request(final VolleyCallback callback)
+    public void post_request()
     {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, server_url,
                 new Response.Listener<String>()
@@ -85,7 +85,7 @@ public class Server_interaction
 
 
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("email", the_name);
+                params.put("email", "wha");
                 params.put("phonenumber", the_mail);
                 params.put("country", the_country);
                 params.put("latitude", String.valueOf(the_latitude));
@@ -94,6 +94,7 @@ public class Server_interaction
                 Log.i(TAG, "inside getparams : "+params.toString());
                 return params;
             }
+
         };//stringrequest parameter end
 
         //add request to requestqueue

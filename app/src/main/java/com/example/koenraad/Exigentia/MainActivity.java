@@ -57,23 +57,7 @@ public class MainActivity extends AppCompatActivity
 
 
                 Server_interaction s_i = new Server_interaction(getApplication());
-                s_i.post_request(new VolleyCallback()
-                {
-                    @Override
-                    public void onSuccess(String text)
-                    {
-                        if(text == null)
-                        {
-                            Log.i(TAG, "it was null");
-                        }
-                        else
-                        {
-                            Log.i(TAG, "not null");
-                            Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
-                        }
-
-                    }
-                });
+                s_i.post_request();
 
 
 
