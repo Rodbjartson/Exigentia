@@ -55,8 +55,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Create the LocationRequest object
         mLocationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(10 * 1000)        // 10 seconds, in milliseconds
-                .setFastestInterval(1 * 1000); // 1 second, in milliseconds
+                .setInterval(2 * 1000)        // 200 seconds, in milliseconds
+                .setFastestInterval(1 * 1000); // 10 seconds, in milliseconds
 
     }
 
@@ -70,12 +70,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onPause()
     {
+
         super.onPause();
+         /*
         if (mGoogleApiClient.isConnected())
         {
             LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
             mGoogleApiClient.disconnect();
-        }
+        }*/
     }
 
     /**
@@ -151,7 +153,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void handleNewLocation(Location location)
     {
-        Log.d(TAG, "heresthelocation "+location.toString());
+        Log.d(TAG, "heres the location : "+location.toString());
 
         double currentLatitude = location.getLatitude();
         double currentLongitude = location.getLongitude();
